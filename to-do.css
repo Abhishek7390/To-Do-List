@@ -1,0 +1,49 @@
+
+.title{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+body{
+  background-color: aqua;
+}
+
+.adding{
+  color: white;
+  border-radius: 20px;
+  background-color: green;
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.adding:hover{
+  opacity: 0.6;
+}
+
+.adding:active{
+  background-color: black;
+}
+
+
+.firstword{
+margin-right: 140px;
+}
+
+.todo-grid{
+display: grid;
+grid-template-columns: 174px 150px 100px;
+}
+
+.data{
+margin-top: 10px;
+}
+
+.deleteKarenge{
+margin-top: 10px;
+background-color: rgb(192, 20, 20);
+border: none;
+
+}

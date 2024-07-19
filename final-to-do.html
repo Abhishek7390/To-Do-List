@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="to-do.css">
+
+
+
+
+  </head>
+<body>
+
+
+<p class="title">
+  To-Do-List  
+</p>
+
+
+
+<input class="inputMaal" placeholder="Add Items">
+
+
+<input  class="inputTaarek"   type="date">
+
+<button class="adding" onclick="addItems();">
+  Add
+</button>
+
+
+<div class="showing todo-grid"></div>
+
+<script>
+
+const list = [];
+
+
+function renderItems(){
+
+  let result = '';
+
+  for(let i = 0; i<list.length; i++){
+    
+    const list2 = list[i];
+    const name = list2.maal2;
+    const dueDate = list2.maal4;
+    const html = `<div class = "data"> ${name} </div> 
+    <div class = "data"> ${dueDate} </div> 
+    <button class = "deleteKarenge" onclick = " list.splice(${i},1); renderItems(); "> Delete </button>  `;
+    result = result + html;
+  }
+
+  document.querySelector('.showing').innerHTML = result;
+
+}
+
+
+
+
+function addItems(){
+
+ const maal1 = document.querySelector('.inputMaal');
+ const maal2 = maal1.value;
+
+ const maal3 = document.querySelector('.inputTaarek');
+ const maal4 = maal3.value;
+
+list.push({ maal2: maal2, maal4: maal4 });
+
+maal1.value = '';
+maal3.value = '';
+
+renderItems();
+
+}
+
+
+  
+</script>
+
+
+</body>
+  </html>
